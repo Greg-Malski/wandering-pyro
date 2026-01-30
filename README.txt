@@ -7,6 +7,7 @@ FEATURES:
 - They sell Randomly Generated Firework Rockets (Flight 1-3, Random Colors/Shapes).
 - They sell Fireworks Supplies (Paper, Gunpowder, Feathers, Fire Charges).
 - They sell Random Firework Stars and Dyes.
+- They buy Firework-adjacent supplies (Charcoal, String, Redstone, Glowstone, Gold Nuggets)
 
 INSTALLATION:
 1. Place this .zip file into your world's "datapacks" folder.
