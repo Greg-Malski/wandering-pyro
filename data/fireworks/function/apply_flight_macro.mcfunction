@@ -1,0 +1,1 @@
+$data modify block ~ 319 ~ Items[0].components."minecraft:fireworks".flight_duration set value $(flight)b

@@ -1,0 +1,2 @@
+# Append the new explosion to the 'explosions' list
+$data modify block ~ 319 ~ Items[0].components."minecraft:fireworks".explosions append value {shape:"$(shape)", colors:[$(color)], has_trail:$(trail), has_twinkle:$(twinkle)}

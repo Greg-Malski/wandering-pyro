@@ -1,0 +1,25 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:firework_rocket",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:fireworks": {
+                                    "flight_duration": 1,
+                                    "explosions": []
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

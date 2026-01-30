@@ -1,0 +1,2 @@
+# Apply the random Color and Shape to the item in the Sky Barrel
+$data modify block ~ 319 ~ Items[{id:"minecraft:firework_star"}].components."minecraft:firework_explosion" merge value {shape:"$(shape)", colors:[$(color)], has_trail:true}
