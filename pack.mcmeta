@@ -1,6 +1,7 @@
 {
   "pack": {
-    "pack_format": 94,
-    "description": "Adds randomized firework trades to traders [1.21.11]"
+    "description": "Adds randomized firework trades to traders [1.21.11]",
+    "min_format": [94,1],
+    "max_format": [94,1]
   }
 }
