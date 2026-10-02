@@ -32,8 +32,29 @@ class TradeGenerationTests(unittest.TestCase):
     def test_pyro_keeps_three_rocket_two_buy_five_supply_slots(self):
         content = read_function("convert_to_pyro.mcfunction")
         self.assertEqual(content.count("function fireworks:add_rocket_trade"), 3)
-        self.assertEqual(content.count("function fireworks:add_buy_trade"), 2)
-        self.assertEqual(content.count("function fireworks:add_supply_trade"), 5)
+        self.assertEqual(content.count("function fireworks:add_buy_trades"), 1)
+        self.assertEqual(content.count("function fireworks:add_supply_trades"), 1)
+
+    def test_batch_functions_roll_sequentially(self):
+        self.assertEqual(
+            read_function("add_buy_trades.mcfunction").count(
+                "function fireworks:add_buy_trade"
+            ),
+            2,
+        )
+        self.assertEqual(
+            read_function("add_supply_trades.mcfunction").count(
+                "function fireworks:add_supply_trade"
+            ),
+            5,
+        )
+
+    def test_item_detection_uses_data_list_matching(self):
+        for name in ("add_buy_trade.mcfunction", "add_supply_trade.mcfunction"):
+            with self.subTest(name=name):
+                content = read_function(name)
+                self.assertIn("execute if data block ~ 319 ~ Items[{id:", content)
+                self.assertNotIn("execute if block ~ 319 ~ minecraft:barrel{Items:", content)
 
     def test_all_json_files_parse(self):
         for path in ROOT.rglob("*.json"):
