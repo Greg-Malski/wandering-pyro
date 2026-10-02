@@ -13,10 +13,10 @@ execute if block ~ 319 ~ minecraft:barrel{Items:[{id:"minecraft:gold_nugget"}]} 
 execute if block ~ 319 ~ minecraft:barrel{Items:[{id:"minecraft:glowstone_dust"}]} run tag @s add buying_glowstone
 
 # CREATE THE TRADE
-data modify entity @s Offers.Recipes append value {maxUses:8, xp:5, buy:{id:"minecraft:stone", count:1}, sell:{id:"minecraft:emerald", count:1}}
+execute if data block ~ 319 ~ Items[0] run data modify entity @s Offers.Recipes append value {maxUses:8, xp:5, buy:{id:"minecraft:stone", count:1}, sell:{id:"minecraft:emerald", count:1}}
 
 # COPY DATA
-data modify entity @s Offers.Recipes[-1].buy set from block ~ 319 ~ Items[0]
+execute if data block ~ 319 ~ Items[0] run data modify entity @s Offers.Recipes[-1].buy set from block ~ 319 ~ Items[0]
 
 # CLEAN UP
 setblock ~ 319 ~ minecraft:air

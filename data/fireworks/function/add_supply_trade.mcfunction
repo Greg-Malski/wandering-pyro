@@ -35,10 +35,10 @@ item replace entity @s weapon.mainhand with air
 execute if entity @s[tag=found_this_star] run function fireworks:generate_star_properties
 
 # CREATE TRADE
-data modify entity @s Offers.Recipes append value {maxUses:10, xp:5, buy:{id:"minecraft:emerald", count:1}, sell:{id:"minecraft:stone", count:1}}
+execute if data block ~ 319 ~ Items[0] run data modify entity @s Offers.Recipes append value {maxUses:10, xp:5, buy:{id:"minecraft:emerald", count:1}, sell:{id:"minecraft:stone", count:1}}
 
 # Copy item from Barrel to Trade
-data modify entity @s Offers.Recipes[-1].sell set from block ~ 319 ~ Items[0]
+execute if data block ~ 319 ~ Items[0] run data modify entity @s Offers.Recipes[-1].sell set from block ~ 319 ~ Items[0]
 
 # CLEAN UP
 setblock ~ 319 ~ minecraft:air

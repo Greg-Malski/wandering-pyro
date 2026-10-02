@@ -3,7 +3,7 @@ particle minecraft:firework ~ ~1 ~ 0.5 0.5 0.5 0.1 50 normal
 playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 1 1
 
 # Change identity
-data merge entity @s {Tags:["pyro_trader"],CustomName:{"color":"gold","text":"Pyrotechnician"}}
+data merge entity @s {Tags:["pyro_trader","fireworks_checked"],CustomName:{"color":"gold","text":"Pyrotechnician"}}
 
 # Remove the generic items
 data modify entity @s Offers.Recipes set value []
