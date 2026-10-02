@@ -20,11 +20,9 @@
                         {
                             "condition": "minecraft:inverted",
                             "term": {
-                                "condition": "minecraft:entity_properties",
+                                "condition": "minecraft:entity_scores",
                                 "entity": "this",
-                                "predicate": {
-                                    "nbt": "{Tags:['buying_charcoal']}"
-                                }
+                                "scores": {"fw_buy_char": 1}
                             }
                         }
                     ]
@@ -46,11 +44,9 @@
                         {
                             "condition": "minecraft:inverted",
                             "term": {
-                                "condition": "minecraft:entity_properties",
+                                "condition": "minecraft:entity_scores",
                                 "entity": "this",
-                                "predicate": {
-                                    "nbt": "{Tags:['buying_redstone']}"
-                                }
+                                "scores": {"fw_buy_red": 1}
                             }
                         }
                     ]
@@ -72,11 +68,9 @@
                         {
                             "condition": "minecraft:inverted",
                             "term": {
-                                "condition": "minecraft:entity_properties",
+                                "condition": "minecraft:entity_scores",
                                 "entity": "this",
-                                "predicate": {
-                                    "nbt": "{Tags:['buying_string']}"
-                                }
+                                "scores": {"fw_buy_str": 1}
                             }
                         }
                     ]
@@ -98,11 +92,9 @@
                         {
                             "condition": "minecraft:inverted",
                             "term": {
-                                "condition": "minecraft:entity_properties",
+                                "condition": "minecraft:entity_scores",
                                 "entity": "this",
-                                "predicate": {
-                                    "nbt": "{Tags:['buying_gold']}"
-                                }
+                                "scores": {"fw_buy_gold": 1}
                             }
                         }
                     ]
@@ -124,11 +116,9 @@
                         {
                             "condition": "minecraft:inverted",
                             "term": {
-                                "condition": "minecraft:entity_properties",
+                                "condition": "minecraft:entity_scores",
                                 "entity": "this",
-                                "predicate": {
-                                    "nbt": "{Tags:['buying_glowstone']}"
-                                }
+                                "scores": {"fw_buy_glow": 1}
                             }
                         }
                     ]
