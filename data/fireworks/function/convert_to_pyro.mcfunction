@@ -9,11 +9,11 @@ data merge entity @s {Tags:["pyro_trader","fireworks_checked"],CustomName:{"colo
 data modify entity @s Offers.Recipes set value []
 
 # Generate New Stock
-function fireworks:add_rocket_trade
-function fireworks:add_rocket_trade
-function fireworks:add_rocket_trade
 function fireworks:add_buy_trades
 function fireworks:add_supply_trades
+function fireworks:add_rocket_trade
+function fireworks:add_rocket_trade
+function fireworks:add_rocket_trade
 
 
 
