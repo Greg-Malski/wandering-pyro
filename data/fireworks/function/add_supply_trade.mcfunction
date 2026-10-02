@@ -4,14 +4,14 @@ data modify block ~ 319 ~ Items set value []
 loot insert ~ 319 ~ loot fireworks:supplies
 
 # IDENTIFY ITEMS (Single-Item Checks)
-execute if block ~ 319 ~ minecraft:barrel{Items:[{id:"minecraft:paper"}]} run tag @s add sold_paper
-execute if block ~ 319 ~ minecraft:barrel{Items:[{id:"minecraft:gunpowder"}]} run tag @s add sold_gunpowder
-execute if block ~ 319 ~ minecraft:barrel{Items:[{id:"minecraft:fire_charge"}]} run tag @s add sold_fire_charge
-execute if block ~ 319 ~ minecraft:barrel{Items:[{id:"minecraft:feather"}]} run tag @s add sold_feather
+execute if data block ~ 319 ~ Items[{id:"minecraft:paper"}] run tag @s add sold_paper
+execute if data block ~ 319 ~ Items[{id:"minecraft:gunpowder"}] run tag @s add sold_gunpowder
+execute if data block ~ 319 ~ Items[{id:"minecraft:fire_charge"}] run tag @s add sold_fire_charge
+execute if data block ~ 319 ~ Items[{id:"minecraft:feather"}] run tag @s add sold_feather
 
 # IDENTIFY & COUNT: Firework Stars (Limit 3)
 tag @s remove found_this_star
-execute if block ~ 319 ~ minecraft:barrel{Items:[{id:"minecraft:firework_star"}]} run tag @s add found_this_star
+execute if data block ~ 319 ~ Items[{id:"minecraft:firework_star"}] run tag @s add found_this_star
 
 # Logic: Count Up backwards so we don't skip numbers in one tick
 execute if entity @s[tag=found_this_star,tag=sold_star_2] run tag @s add sold_star_3
